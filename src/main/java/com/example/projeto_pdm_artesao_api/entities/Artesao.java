@@ -26,9 +26,6 @@ public class Artesao {
 	@Column(name = "telefone", nullable = false)
 	private String telefone;
 
-	@Column(name = "identificacao", nullable = false, unique = true) // identification (CPF/RG/CNPJ), may remove later
-	private String identificacao;
-
 	@Column(name = "email", nullable = false)
 	private String email;
 
@@ -41,84 +38,60 @@ public class Artesao {
 	public Artesao() {
 	}
 
-		public Artesao(Long id, String nome, String telefone, String identificacao, String email, String senha,
-			List<Produto> produtos) {
-		this.id = id;
-		this.nome = nome;
-		this.telefone = telefone;
-		this.identificacao = identificacao;
-		this.email = email;
-		this.senha = senha;
-		this.produtos = produtos;
-	}
+    public Artesao(Long id, String nome, String telefone, String email, String senha, List<Produto> produtos) {
+        this.id = id;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.senha = senha;
+        this.produtos = produtos;
+    }
 
-		public Long getId() {
-			return id;
-		}
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+    public String getNome() {
+        return nome;
+    }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-		public String getNome() {
-			return nome;
-		}
+    public String getTelefone() {
+        return telefone;
+    }
 
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-		public String getTelefone() {
-			return telefone;
-		}
+    public String getSenha() {
+        return senha;
+    }
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
-		public void setTelefone(String telefone) {
-			this.telefone = telefone;
-		}
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
 
-
-		public String getIdentificacao() {
-			return identificacao;
-		}
-
-
-		public void setIdentificacao(String identificacao) {
-			this.identificacao = identificacao;
-		}
-
-
-		public String getEmail() {
-			return email;
-		}
-
-
-		public void setEmail(String email) {
-			this.email = email;
-		}
-
-
-		public String getSenha() {
-			return senha;
-		}
-
-
-		public void setSenha(String senha) {
-			this.senha = senha;
-		}
-
-
-		public List<Produto> getProdutos() {
-			return produtos;
-		}
-
-
-		public void setProdutos(List<Produto> produtos) {
-			this.produtos = produtos;
-		}
-	
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
 }

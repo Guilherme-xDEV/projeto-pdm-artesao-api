@@ -37,7 +37,6 @@ public class AuthService {
 
         artesao.setNome(dto.nome());
         artesao.setTelefone(dto.telefone());
-        artesao.setIdentificacao(dto.identificacao());
         artesao.setEmail(dto.email());
 
         String senhaHash = passwordEncoder.encode(dto.senha());
@@ -50,7 +49,6 @@ public class AuthService {
             salvo.getId(),
             salvo.getNome(),
             salvo.getTelefone(),
-            salvo.getIdentificacao(),
             salvo.getEmail()
         );
     }
